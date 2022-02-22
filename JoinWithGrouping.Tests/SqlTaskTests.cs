@@ -104,6 +104,14 @@ namespace JoinWithGrouping.Tests
         }
 
         [Test]
+        [TestCase(2)]
+        [TestCase(3)]
+        public void SelectQuery_ContainsWhere(int index)
+        {
+            var actual = Queries[index - 1];
+            Assert.IsTrue(SelectHelper.ContainsWhere(actual), "Query should contain 'WHERE' statements.");
+        }
+        [Test]
         public void SelectQuery_ContainsOrderBy([Range(1, FilesCount)] int index)
         {
             var actual = Queries[index - 1];

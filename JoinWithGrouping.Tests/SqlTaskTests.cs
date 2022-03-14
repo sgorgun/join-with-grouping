@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
-using JoinWithGrouping.Tests.Helpers;
+using AutocodeDB.Helpers;
 using System;
-using JoinWithGrouping.Tests.Models;
+using AutocodeDB.Models;
 using System.IO;
 
 namespace JoinWithGrouping.Tests

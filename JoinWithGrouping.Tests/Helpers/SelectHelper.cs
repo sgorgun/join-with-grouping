@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.Sqlite;
-using JoinWithGrouping.Tests.Models;
+using AutocodeDB.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace JoinWithGrouping.Tests.Helpers
+namespace AutocodeDB.Helpers
 {
     internal class SelectHelper
     {
@@ -22,6 +22,7 @@ namespace JoinWithGrouping.Tests.Helpers
         public static bool ContainsOrderBy(string query) => OrderBy_Regex.IsMatch(query);
         public static bool ContainsGroupBy(string query) => GroupBy_Regex.IsMatch(query);
         public static bool ContainsWhere(string query) => Where_Regex.IsMatch(query);
+
         public static SelectResult[] GetResults(IEnumerable<string> queries)
         {
             var results = new List<SelectResult>();

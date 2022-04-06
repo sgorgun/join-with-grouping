@@ -100,7 +100,7 @@ namespace JoinWithGrouping.Tests
         public void SelectQuery_ContainsSelectFrom([Range(1, FilesCount)] int index)
         {
             var actual = Queries[index - 1];
-            Assert.IsTrue(SelectHelper.ContainsSelectDistinctFrom(actual), "Query should contain 'SELECT' and 'FROM' statements.");
+            Assert.IsTrue(SelectHelper.ContainsSelectFrom(actual), "Query should contain 'SELECT' and 'FROM' statements.");
         }
 
         [Test]
